@@ -1,90 +1,130 @@
-/* General page styling */
+/* ===== Base page styling ===== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* will be updated by sd theme vars below */
+  margin: 0;
+  padding: 0;
 }
 
-/* Header section styling */
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Logo colors if you want to use! */
+:root{
+  --sd-bg: #fff6e3;    /* light cream */
+  --sd-ink: #3d2b1f;   /* chocolate brown */
+  --sd-muted:#6a5a4f;  /* muted brown */
+  --sd-accent:#f1b653; /* bun gold */
+  --sd-accent2:#63a85a;/* lettuce */
+  --sd-accent3:#d85b45;/* tomato */
 }
 
-/* Styling for team logo image */
+body {
+  background: var(--sd-bg);
+  color: var(--sd-ink);
+}
+
+/* Header bar with motto (no logo here) */
+.sd-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:16px 24px;
+  border-bottom:1px solid rgba(0,0,0,.06);
+  background:#fffdf7;
+}
+
+.sd-title{
+  margin:0;
+  font-size:32px;
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:.2px;
+}
+
+.sd-subtitle{
+  margin:4px 0 0;
+  color:var(--sd-muted);
+  font-size:14px;
+}
+
+/* ===== Section header (logo + Meet Our Team) ===== */
+.section-header {
+  background: #333;
+  color: #fff;
+  padding: 14px 0 18px;
+  text-align: center;
+}
+
+/* Single logo used above the heading */
 .team-logo {
-    width: 150px; /* Adjust the size as needed */
-    margin-top: 10px;
+  width: 150px;         /* you can tweak this */
+  display: block;
+  margin: 10px auto 8px; /* centers above heading */
+  border-radius: 10px;   /* optional rounded corners */
 }
 
-/* Menu button styling */
-header nav {
-    margin-top: 10px;
+/* Navigation buttons inside the dark section header */
+.section-header nav {
+  margin-top: 10px;
 }
 
-header nav button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 5px;
+.section-header nav button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
 }
 
-header nav button:hover {
-    background: #0056b3;
+.section-header nav button:hover {
+  background: #0056b3;
 }
 
-/* Flex container for team bios and vision sections */
+/* ===== Shared layout/cards ===== */
 .container {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* Card styling for individual team bios */
 .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    flex: 1 1 calc(30% - 40px);
-    text-align: center;
-    transition: transform 0.2s;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 calc(30% - 40px);
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 h2 {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 /* Initially hide bio details */
 .bio {
-    display: none;
-    margin-top: 10px;
-    color: #555;
+  display: none;
+  margin-top: 10px;
+  color: #555;
 }
 
-/* Button styling */
+/* Default buttons (for cards etc.) */
 button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background: #0056b3;
+  background: #0056b3;
 }

@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Bio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <title>softdash — team site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
+  <header class="sd-header">
+    <div class="sd-brand">
+      <h1 class="sd-title">softdash</h1>
+      <p class="sd-subtitle">clean code - good food - fast delivery</p>
+    </div>
+  </header>
+
+  <!-- Section header with logo ABOVE "Meet Our Team" -->
+  <header class="section-header">
+    <!-- Single PNG logo file -->
+    <img src="img/softdash.jpg" alt="softdash logo" class="team-logo">
     <h1>Meet Our Team</h1>
-    <!-- Example team logo -->
-    <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
 
-    <!-- Navigation menu to switch between sections -->
+    <!-- Navigation -->
     <nav>
-        <button onclick="showSection('bios')">Team Bios</button>
-        <button onclick="showSection('vision')">Team Vision</button>
+      <button onclick="showSection('bios')">Team Bios</button>
+      <button onclick="showSection('vision')">Team Vision</button>
     </nav>
-</header>
+  </header>
 
-<!-- Team bios section (default section) -->
-<div id="bios" class="container">
-    <!-- Each card represents an individual team member -->
+  <!-- Team bios (default visible) -->
+  <div id="bios" class="container">
     <div class="card">
-        <h2>John Doe</h2>
-        <p>Frontend Developer</p>
-        <button onclick="toggleBio('bio1')">Show Bio</button>
-        <p id="bio1" class="bio">John is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>
+      <h2>Brad</h2>
+      <p>Frontend Developer</p>
+      <button onclick="toggleBio('bio1')">Show Bio</button>
+      <p id="bio1" class="bio">The goat</p>
     </div>
     <div class="card">
-        <h2>Jane Smith</h2>
-        <p>Backend Developer</p>
-        <button onclick="toggleBio('bio2')">Show Bio</button>
-        <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
+      <h2>Robert</h2>
+      <p>Frontend Developer</p>
+      <button onclick="toggleBio('bio2')">Show Bio</button>
+      <p id="bio2" class="bio">The goat</p>
     </div>
-    <div class="card">
-        <h2>Emily Johnson</h2>
-        <p>UI/UX Designer</p>
-        <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+      <div class="card">
+      <h2>Kenny</h2>
+      <p>Frontend Developer</p>
+      <button onclick="toggleBio('bio3')">Show Bio</button>
+      <p id="bio3" class="bio">The goat</p>
     </div>
-</div>
+      <div class="card">
+      <h2>Josh</h2>
+      <p>Frontend Developer</p>
+      <button onclick="toggleBio('bio4')">Show Bio</button>
+      <p id="bio4" class="bio">The goat</p>
+    </div>
+      <div class="card">
+      <h2>Maddy</h2>
+      <p>Frontend Developer</p>
+      <button onclick="toggleBio('bio5')">Show Bio</button>
+      <p id="bio5" class="bio">The goat</p>
+    </div>
+  </div>
 
-<!-- Team vision/mission statement section (hidden by default) -->
-<div id="vision" class="container" style="display: none;">
+  <!-- Team vision (hidden by default) -->
+  <div id="vision" class="container" style="display:none;">
     <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
-</div>
+    <p>We at softdash strive to combine creativity, precision, and collaboration in everything we build. Our team values clean, maintainable code and thoughtful design that enhances the user experience. In the atmosphere of fast reliable food is a fast and reliable software team. You can always improve the food, but you can never get any better than this team!</p>
+  </div>
 
-<script src="script.js"></script> <!-- Link to external JavaScript file -->
-
+  <script src="script.js"></script>
 </body>
 </html>
