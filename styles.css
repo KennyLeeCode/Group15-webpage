@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* will be updated by sd theme vars below */
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo colors if you want to use! */
+:root {
+  --sd-bg: #fff6e3;
+  --sd-ink: #3d2b1f;
+  --sd-muted: #6a5a4f;
+  --sd-accent: #f1b653;
+  --sd-accent2: #63a85a;
+  --sd-accent3: #d85b45;
+}
+
+body {
+  background: var(--sd-bg);
+  color: var(--sd-ink);
+}
+
+/* Header bar with motto */
+.sd-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  background: var(--sd-accent);
+}
+
+.sd-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: .2px;
+}
+
+.sd-subtitle {
+  margin: 4px 0 0;
+  color: var(--sd-muted);
+  font-size: 14px;
+}
+
+/* Section header (logo + Meet Our Team) */
+.section-header {
+  background: var(--sd-ink);
+  color: #fff6e3;
+  padding: 14px 0 18px;
+  text-align: center;
+}
+
+/* Single logo used above the heading */
+.team-logo {
+  width: 150px;
+  display: block;
+  margin: 10px auto 8px;
+  border-radius: 10px;
+}
+
+/* Navigation buttons inside the section header */
+.section-header nav {
+  margin-top: 10px;
+}
+
+.section-header nav button {
+  background: var(--sd-accent2);
+  color: #0f2a0f;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.section-header nav button:hover {
+  filter: brightness(0.95);
+}
+
+/* Shared layout/cards */
+.container {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background: #fffdf7;
+  border: 1px solid rgba(61,43,31,.10);
+  box-shadow: 0 2px 8px rgba(61,43,31,.08);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 calc(30% - 40px);
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 10px;
+}
+
+/* Initially hide bio details */
+.bio {
+  display: none;
+  margin-top: 10px;
+  color: var(--sd-muted);
+}
+
+/* Default buttons (cards, etc.) */
+button {
+  background: var(--sd-accent3);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c44e3c;
+}
+
+/* Avatar image */
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+  border: 2px solid rgba(0,0,0,.08);
+}
+
+/* Bio section hidden by default */
+.bio {
+  display: none;
+  margin-top: 10px;
+  color: var(--sd-muted);
+  flex-basis: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* When bio is open */
+.card.bio-open .bio {
+  display: block;
+}
+
+/* Moodboard layout inside bio */
+.moodboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Moodboard images — properly sized and never clipped */
+.moodboard img.mood {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(0,0,0,.1);
+  display: inline-block;
+}
