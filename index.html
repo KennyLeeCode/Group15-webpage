@@ -32,14 +32,29 @@
 
   <!-- Team bios (default visible) -->
   <div id="bios" class="container">
+
     <div class="card">
-      
-      <h2>Brad</h2>
-      <p>The product owner at SoftDash, head engineer in charge of SLIME deployment. Senior at UNCC, does HVAC on the
-        side to keep the lights on.</p>
-      <button onclick="toggleBio('bio1')">Show Bio</button>
-      <p id="bio1" class="bio">The goat</p>
+  <img src="img/cleetus_dingle.jpg" alt="Brad Avatar" class="avatar">
+  <h2>Brad</h2>
+  <p>Product Owner</p>
+
+  <button onclick="toggleBio('bio1', this)">Show Bio</button>
+
+  <div id="bio1" class="bio">
+    <p>
+      The head visionary at SoftDash, Brad is larger than life, while still somehow remaining humble despite his reputation as one of the genius developers of our generation.
+      He is also the head engineer in charge of SLIME deployment.
+      A senior at UNCC, he does HVAC on the side to keep the lights on when he's not helping out disadvantaged youths or building wells in impoverished communities.
+    </p>
+
+    <!-- Moodboard -->
+    <div class="moodboard">
+      <img src="img/ac.jpg" alt="gungeon" class="mood">
+      <img src="img/nvim.jpg" alt="freeze dried strawberries" class="mood">
+      <img src="img/archlinux.jpg" alt="diamonds" class="mood">
     </div>
+  </div>
+</div>
 
     <div class="card">
       <img src="img/Chomper.png" alt="Robert Gross Avatar" class="avatar">
